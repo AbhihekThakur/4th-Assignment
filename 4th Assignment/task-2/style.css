@@ -1,0 +1,401 @@
+@font-face {
+    font-family: "signature";
+    src: url('./fonts/BrittanySignature.ttf');
+}
+@font-face {
+    font-family: "outfit";
+    src: url('./fonts/Outfit-VariableFont_wght.ttf');
+}
+:root{
+    --radius:24px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'outfit',sans-serif;
+}
+html,
+body {
+    height:100%;
+    width:100%;
+}
+.container{
+    height:150%;
+    width: 100%;
+    background-color: rgb(245, 241, 241);
+    padding: 10px 40px 20px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.8fr 1.5fr 1fr;
+    grid-template-rows: 1.2fr 5fr 1.5fr 2.5fr 2.1fr 2fr 2fr 2.1fr 1fr 4fr;
+    grid-template-areas: 
+    "header header header header header"
+    "heading heading heading heading heading"
+    ". . middle . ."
+    ". middle-left-top middle middle-right-top ."
+    "left middle-left-top middle middle-right-top right"
+    "left middle-left-bottom middle middle-right-top right "
+    "left middle-left-bottom middle middle-right-bottom right"
+    ". middle-left-bottom middle middle-right-bottom ."
+    ". . middle . ."
+    "bottom-left bottom-left bottom-middle bottom-right bottom-right"
+    ;
+    gap: 15px;
+    
+}
+header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.145);
+}
+
+nav{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav h4{
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: capitalize ;
+}
+.header-right{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+}
+.header-right .icon{
+    height: 20px;
+    width: 20px;
+    clip-path: polygon(5.56% 5.56%, 50% 0%, 94.44% 5.56%, 100% 50%, 94.44% 94.44%, 50% 100%, 5.56% 94.44%, 14% 88.51%, 50% 89.82%, 86.04% 86.25%, 89.82% 50%, 87.05% 14.04%, 50% 10.19%, 50% 34.62%, 38.24% 38.24%, 50% 50.13%, 38.24% 61.76%, 50% 65.38%, 61.76% 61.76%, 49.83% 49.94%, 61.76% 38.24%, 50% 34.62%, 50% 20.37%, 72.22% 27.78%, 61.76% 50%, 72.22% 72.22%, 50% 79.63%, 27.78% 72.22%, 38.24% 50%, 27.78% 27.78%, 50% 20.37%, 50% 10.19%, 13.63% 13.63%, 10.19% 50%, 15.41% 90%, 5.56% 94.69%, 0% 50%);
+    background-color: #111213;
+}
+.header-right .cart{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+}
+.heading{
+    grid-area: heading;
+    position: relative;
+    
+}
+.heading::before{
+    content: "";
+    height: 150px;
+    width: 150px;
+    background-image: url('./image/download.png');
+    position: absolute;
+    top: -18%;
+    left: -3%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.heading::after{
+    content: "";
+    height: 60px;
+    width: 60px;
+    background-image: url('./image/rosemarry.png');
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.heading h1{
+    text-align: center;
+    font-family: 'outfit',sans-serif;
+    text-transform: capitalize;
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 80px;
+}
+.heading .leftside-text{
+    position: absolute;
+    bottom: -70%;
+}
+.leftside-text p{
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.leftside-text h2{
+    font-size: 25px;
+    line-height: 35px;
+}
+.heading .flower{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 22%;
+}
+.explore-circle{
+    position: absolute;
+    right: -3%;
+    bottom: -100%;
+    width: 250px;
+    height: 250px;
+}
+.explore-circle svg{
+    width: 80%;
+    height: 80%;
+}
+.explore-circle text{
+    fill: #222;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+}
+.curved-line{
+    fill: none;
+    stroke: #222;
+    stroke-width:4;
+}
+.explore-circle i{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50% -50%);
+    font-size: 40px;
+    
+}
+.left{
+    background-color: #feb24b;
+    grid-area: left ;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.left img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 58% center;
+    transform: scale(2);
+    transform-origin: 58% 5%;
+}
+.middle-left-top{
+    background-color: #f0d7ac;
+    grid-area: middle-left-top;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+.middle-left-top img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    transform: scale(1.3);
+    object-position: top;
+}
+.middle-left-bottom{
+    background-color: #23b9af;
+    grid-area: middle-left-bottom;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+.middle-left-bottom img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    object-position: top;
+}
+.middle{
+    background-color: #fdd645;
+    grid-area: middle;
+    border-radius: var(--radius);
+    position: relative;
+}
+.middle .star{
+    height: 100px;
+    width: 100px;
+    clip-path: polygon(50% 0%, 56.5% 33.52%, 80.14% 10.77%, 65.07% 40.01%, 99.25% 41.32%, 63.76% 51.84%, 86.81% 77.66%, 54.74% 60.05%, 50% 96.33%, 43.19% 61.82%, 17.51% 77.66%, 33.11% 51.84%, 0% 41.32%, 30.88% 38.71%, 17.51% 10.77%, 43.08% 33.52%);
+    background-color: #0a0909;
+    position: absolute;
+    left: 37%;
+    top: -7%;
+}
+.middle img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+.middle-right-top{
+    background-color: #fe8338;
+    grid-area:middle-right-top;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+.middle-right-top img{
+     height: 100%;
+    width: 100%;
+    object-fit:cover;
+    object-position: top;
+}
+.middle-right-bottom{
+    background-color: #009fed;
+    grid-area:middle-right-bottom;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+.middle-right-bottom img{
+     height: 100%;
+    width: 100%;
+    object-fit:cover;
+    object-position: 43% 32%;
+    
+}
+.right{
+    background-color: #76b68e;
+    grid-area: right;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+.right img{
+    height: 100%;
+    width: 100%;
+    border-radius: var(--radius);
+    object-fit:cover;
+    transform: scale(2);
+    transform-origin: top;
+}
+
+
+.bottom-left{
+    grid-area: bottom-left;
+    position: relative;
+}
+.bottom-left i{
+    position: absolute;
+    font-size: 60px;
+    top: -100px;
+}
+.bottom-left p{
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+    font-weight: 600;
+}
+.bottom-left .sign{
+    font-family: "signature";
+    font-size: 50px;
+    margin-top: 60px;
+    isolation: isolate;
+}
+.sign::before{
+    content: "";
+    position: absolute;
+    width: 55%;
+    height: 10px;
+    background-color: #e5c34ab1;
+    left: 0;
+    bottom:0;
+    z-index: -1;
+}
+.bottom-left img{
+    position: absolute;
+    right: 0%;
+    bottom: 20%;
+}
+.bottom-middle{
+    grid-area: bottom-middle;
+    position: relative;
+}
+.bottom-middle button{
+    height: 45%;
+    width: 55%;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    font-weight:600 ;
+}
+.bottom-middle button i{
+    font-size: 20px;
+}
+.bottom-right{
+    grid-area: bottom-right;
+    position: relative;
+    padding: 20px 30px 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 40px;
+}
+.bottom-right::before{
+    content: "";
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    top: 22%;
+    left: 7%;
+    background-color: #f1d48b;
+    clip-path: polygon(0 0, 58% 0, 100% 100%, 42% 100%);
+}
+.bottom-right img{
+    position: absolute;
+    right: 0;
+    top: -30%;
+}
+.bottom-right h2{
+    position: absolute;
+    right: 10%;
+    top: -100%;
+}
+.bottom-right-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.bottom-right h1{
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: scaleY(1.7);
+    font-weight: 200;
+    color: #0a0909db;
+}
+.bottom-right-text .date{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.date p{
+    font-size: 13px;
+    font-weight: 600;
+}
+.date i{
+    font-size: 5px;
+}
+.bottom-right-text h3{
+    font-size: 25px;
+    font-weight: 500;
+}
+.bottom-right button{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #0a0909;
+    border: none;
+    color: white;
+    font-size: 25px;
+}
